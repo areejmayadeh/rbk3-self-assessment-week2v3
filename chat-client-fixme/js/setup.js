@@ -113,11 +113,12 @@ var postData = function(message, username) {
       username: username,
       text: message
     }),
-    success: function(data) {
+    success: function(data) {setImmediate(function(data) {
       console.log('Success!', data);
-    },
+    })} ,
     error: function(data) {
       console.log(data);
     }
   });
 };
+
